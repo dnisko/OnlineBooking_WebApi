@@ -8,7 +8,13 @@
         public string Description { get; set; }
         public string WebPageUrl { get; set; }
         public string VideoUrl { get; set; }
+
         public int EventTypeId { get; set; }
+        public EventType EventType { get; set; }
+
         public int VenueId { get; set; }
+        public Venue Venue { get; set; }
+
+        public ICollection<TicketType> TicketTypes { get; set; }
     }
 }
