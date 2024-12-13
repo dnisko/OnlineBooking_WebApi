@@ -6,4 +6,14 @@
     <Nullable>enable</Nullable>
   </PropertyGroup>
 
+  <ItemGroup>
+    <Folder Include="EventType\" />
+    <Folder Include="Venue\" />
+    <Folder Include="User\" />
+    <Folder Include="TicketType\" />
+    <Folder Include="TicketInstance\" />
+    <Folder Include="ShoppingCart\" />
+    <Folder Include="Order\" />
+  </ItemGroup>
+
 </Project>
