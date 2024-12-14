@@ -21,6 +21,20 @@ namespace DataAccess
         protected override void OnModelCreating(ModelBuilder builder)
         {
             base.OnModelCreating(builder);
+
+            /*
+            builder.Entity<Order>()
+                .HasMany(o => o.TicketInstances) // An Order has many TicketInstances
+                .WithOne(ti => ti.Order)         // A TicketInstance belongs to one Order
+                .HasForeignKey(ti => ti.OrderId)
+                .OnDelete(DeleteBehavior.Cascade); // Cascade delete: deleting Order deletes its TicketInstances
+
+            builder.Entity<ShoppingCart>()
+                .HasMany(sc => sc.TicketInstances) // A ShoppingCart can hold many TicketInstances
+                .WithOne(ti => ti.ShoppingCart)    // A TicketInstance belongs to one ShoppingCart
+                .HasForeignKey(ti => ti.ShoppingCartId)
+                .OnDelete(DeleteBehavior.Restrict); // Optional: prevent cascading deletes
+            */
         }
     }
 }

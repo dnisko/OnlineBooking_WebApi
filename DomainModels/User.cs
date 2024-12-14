@@ -8,7 +8,7 @@
         public string Password { get; set; }
         public int IsAdmin { get; set; }
 
-        ICollection<Order> Orders { get; set; }
-        ICollection<ShoppingCart> shoppingCarts { get; set; }
+        public ICollection<Order> Orders { get; set; }
+        public ICollection<ShoppingCart> ShoppingCarts { get; set; }
     }
 }

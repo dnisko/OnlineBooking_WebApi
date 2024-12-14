@@ -1,6 +1,6 @@
-﻿namespace DomainModels
+﻿namespace DTOs.Venue
 {
-    public class Venue : BaseEntity
+    public class VenueRequestDto
     {
         public string VenueName { get; set; }
         public int Capacity { get; set; }

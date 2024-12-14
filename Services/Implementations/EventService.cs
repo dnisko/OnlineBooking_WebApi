@@ -1,7 +1,6 @@
 ﻿using AutoMapper;
 using DataAccess.Interfaces;
 using DTOs.Event;
-using Microsoft.AspNetCore.Mvc;
 using Services.Interfaces;
 
 namespace Services.Implementations
@@ -16,10 +15,10 @@ namespace Services.Implementations
             _eventRepository = eventRepository;
             _mapper = mapper;
         }
-        public async Task<IEnumerable<EventDto>> GetAllEvents()
+        public async Task<IEnumerable<EventRequestDto>> GetAllEvents()
         {
             var allEvents = await _eventRepository.GetAllAsync();
-            return _mapper.Map<IEnumerable<EventDto>>(allEvents);
+            return _mapper.Map<IEnumerable<EventRequestDto>>(allEvents);
         }
     }
 }
